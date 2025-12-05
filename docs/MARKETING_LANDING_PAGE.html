@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCT YMS - Modern Yard Management System for Logistics</title>
+    <meta name="description" content="Professional yard management software for cross-docks, 3PLs, and warehouses. Track trailers, manage dock doors, and optimize yard operations.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 500: '#1C4E80', 600: '#1A4570', 700: '#163350' },
+                        accent: '#247BA0'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center mr-3">
+                    <i class="ti ti-forklift text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-bold text-gray-800">TCT YMS</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-primary-500">Features</a>
+                <a href="#benefits" class="text-gray-600 hover:text-primary-500">Benefits</a>
+                <a href="#pricing" class="text-gray-600 hover:text-primary-500">Pricing</a>
+                <a href="#contact" class="bg-primary-500 text-white px-6 py-2 rounded-lg hover:bg-primary-600">
+                    Schedule Demo
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary-500 to-primary-700 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                        Stop Losing Trailers.<br>
+                        Start Managing Your Yard.
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8">
+                        Modern yard management software built for logistics operations in Laredo and South Texas.
+                        Replace whiteboards and spreadsheets with real-time visibility.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-bold text-lg text-center hover:bg-gray-100">
+                            Schedule Free Demo
+                        </a>
+                        <a href="#features" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg text-center hover:bg-white/10">
+                            See Features
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="bg-white/10 rounded-2xl p-6 backdrop-blur">
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="bg-white/20 rounded-lg p-4 text-center">
+                                <div class="text-3xl font-bold">127</div>
+                                <div class="text-sm opacity-80">Trailers</div>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 text-center">
+                                <div class="text-3xl font-bold">24</div>
+                                <div class="text-sm opacity-80">At Doors</div>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 text-center">
+                                <div class="text-3xl font-bold">98%</div>
+                                <div class="text-sm opacity-80">Utilization</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 grid grid-cols-6 gap-2">
+                            <!-- Mini yard visualization -->
+                            <div class="bg-green-400/50 rounded p-2 text-xs text-center">D1</div>
+                            <div class="bg-amber-400/50 rounded p-2 text-xs text-center">D2</div>
+                            <div class="bg-amber-400/50 rounded p-2 text-xs text-center">D3</div>
+                            <div class="bg-green-400/50 rounded p-2 text-xs text-center">D4</div>
+                            <div class="bg-amber-400/50 rounded p-2 text-xs text-center">D5</div>
+                            <div class="bg-green-400/50 rounded p-2 text-xs text-center">D6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Sound Familiar?</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Most yards in Laredo still run on whiteboards and radio calls. It doesn't have to be this way.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-red-500">
+                    <i class="ti ti-map-search text-4xl text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">"Where's Trailer 53?"</h3>
+                    <p class="text-gray-600">Spotters driving around looking for trailers. Dispatchers calling drivers. Customers waiting.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-amber-500">
+                    <i class="ti ti-clock-exclamation text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">"How long has this been sitting?"</h3>
+                    <p class="text-gray-600">Trailers detained for days without anyone noticing. Demurrage charges piling up.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-purple-500">
+                    <i class="ti ti-door text-4xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">"All doors are full!"</h3>
+                    <p class="text-gray-600">No visibility into door availability. Trailers queued up with no plan. Chaos at shift change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Everything You Need to Run Your Yard</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Purpose-built for cross-docks, 3PLs, and warehouses handling Mexico-US freight.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                        <i class="ti ti-map text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Visual Yard Map</h3>
+                    <p class="text-gray-600">See your entire yard at a glance. Color-coded trailers by status. Drag-and-drop to move.</p>
+                </div>
+
+                <div class="p-6">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                        <i class="ti ti-barrier-block text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Gate Check-In/Out</h3>
+                    <p class="text-gray-600">Capture driver, carrier, seal number, and photos. Track every arrival and departure.</p>
+                </div>
+
+                <div class="p-6">
+                    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+                        <i class="ti ti-door text-2xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Dock Door Management</h3>
+                    <p class="text-gray-600">Real-time door availability. Assign trailers with one click. Track loading/unloading status.</p>
+                </div>
+
+                <div class="p-6">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                        <i class="ti ti-arrows-move text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Move Task Queue</h3>
+                    <p class="text-gray-600">Create move requests. Assign to spotters. Track completion times and productivity.</p>
+                </div>
+
+                <div class="p-6">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                        <i class="ti ti-device-mobile text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Spotter Mobile App</h3>
+                    <p class="text-gray-600">Simple mobile interface for spotters. Claim tasks. Mark complete. Works on any phone.</p>
+                </div>
+
+                <div class="p-6">
+                    <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+                        <i class="ti ti-report-analytics text-2xl text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Analytics & Reports</h3>
+                    <p class="text-gray-600">Dwell time tracking. Door utilization. Spotter productivity. Export to Excel anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Yards Choose TCT YMS</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="ti ti-check text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-gray-800">Reduce Detention & Demurrage</h3>
+                            <p class="text-gray-600">Dwell time alerts before charges kick in. Never lose track of a trailer again.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="ti ti-check text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-gray-800">Faster Turnaround</h3>
+                            <p class="text-gray-600">Clear visibility means faster door assignments and quicker trailer processing.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="ti ti-check text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-gray-800">Happier Customers</h3>
+                            <p class="text-gray-600">Answer "where's my trailer?" instantly. Provide ETA with confidence.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="ti ti-check text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-gray-800">Easy to Use</h3>
+                            <p class="text-gray-600">No training needed. Your team will be up and running in hours, not weeks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl font-bold text-primary-500">50%</div>
+                        <div class="text-gray-600">Average reduction in time spent looking for trailers</div>
+                    </div>
+                    <div class="border-t pt-6 grid grid-cols-2 gap-4 text-center">
+                        <div>
+                            <div class="text-2xl font-bold text-gray-800">3x</div>
+                            <div class="text-sm text-gray-500">Faster door assignments</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-gray-800">100%</div>
+                            <div class="text-sm text-gray-500">Visibility into your yard</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Simple, Transparent Pricing</h2>
+            <p class="text-gray-600 text-center mb-12">No per-user fees. Unlimited users. One flat monthly rate.</p>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Starter -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Starter</h3>
+                    <p class="text-gray-500 mb-6">For small yards</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">$499</span>
+                        <span class="text-gray-500">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-600">
+                            <i class="ti ti-check text-green-500 mr-2"></i>Up to 50 trailer capacity
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ti ti-check text-green-500 mr-2"></i>Up to 12 dock doors
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ti ti-check text-green-500 mr-2"></i>Unlimited users
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ti ti-check text-green-500 mr-2"></i>Email support
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 border-2 border-primary-500 text-primary-500 rounded-lg text-center font-medium hover:bg-primary-50">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Professional -->
+                <div class="bg-primary-500 rounded-xl shadow-lg p-8 text-white transform scale-105">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Professional</h3>
+                        <span class="bg-white/20 px-2 py-1 rounded text-xs">Most Popular</span>
+                    </div>
+                    <p class="text-blue-100 mb-6">For mid-sized yards</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$799</span>
+                        <span class="text-blue-100">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="ti ti-check text-green-300 mr-2"></i>Up to 150 trailer capacity
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ti ti-check text-green-300 mr-2"></i>Up to 30 dock doors
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ti ti-check text-green-300 mr-2"></i>Unlimited users
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ti ti-check text-green-300 mr-2"></i>Phone & email support
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ti ti-check text-green-300 mr-2"></i>Custom reports
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 bg-white text-primary-600 rounded-lg text-center font-bold hover:bg-gray-100">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Enterprise</h3>
+                    <p class="text-gray-500 mb-6">For large operations</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">$1,299</span>
+                        <span class="text-gray-500">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-600">
+                            <i class="ti ti-check text-green-500 mr-2"></i>Unlimited capacity
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ti ti-check text-green-500 mr-2"></i>60+ dock doors
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ti ti-check text-green-500 mr-2"></i>Priority support
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ti ti-check text-green-500 mr-2"></i>Custom integrations
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="ti ti-check text-green-500 mr-2"></i>On-site training
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 border-2 border-primary-500 text-primary-500 rounded-lg text-center font-medium hover:bg-primary-50">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-center text-gray-500 mt-8">
+                All plans include: Setup assistance • Data migration help • 30-day money-back guarantee
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="py-20 bg-primary-500 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Modernize Your Yard?</h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Schedule a free 30-minute demo. See TCT YMS in action with your actual yard layout.
+            </p>
+            <div class="bg-white rounded-xl p-8 text-left max-w-xl mx-auto">
+                <form action="#" method="POST" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                        <input type="text" class="w-full px-4 py-2 border rounded-lg" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                        <input type="text" class="w-full px-4 py-2 border rounded-lg" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" class="w-full px-4 py-2 border rounded-lg" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                        <input type="tel" class="w-full px-4 py-2 border rounded-lg" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">How many trailers in your yard?</label>
+                        <select class="w-full px-4 py-2 border rounded-lg">
+                            <option>Under 50</option>
+                            <option>50-100</option>
+                            <option>100-200</option>
+                            <option>200+</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-primary-500 text-white py-3 rounded-lg font-bold hover:bg-primary-600">
+                        Schedule My Demo
+                    </button>
+                </form>
+            </div>
+            <p class="mt-6 text-blue-100">
+                Or call us: <a href="tel:+1-956-555-0100" class="underline font-bold">(956) 555-0100</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center mr-2">
+                        <i class="ti ti-forklift text-white"></i>
+                    </div>
+                    <span class="text-white font-bold">TCT YMS</span>
+                </div>
+                <div class="text-sm">
+                    &copy; 2024 TCT Solutions. Built in Laredo, Texas for logistics.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

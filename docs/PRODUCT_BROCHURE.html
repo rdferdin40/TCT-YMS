@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCT Yard Management System - Product Brochure</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.5in;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #1C4E80;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: #1C4E80;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .logo-text h1 {
+            font-size: 18pt;
+            color: #1C4E80;
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 9pt;
+            color: #666;
+            margin: 0;
+        }
+
+        .tagline {
+            text-align: right;
+            font-size: 11pt;
+            color: #1C4E80;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1C4E80 0%, #2563eb 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 16pt;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            font-size: 10pt;
+            opacity: 0.9;
+        }
+
+        /* Section Styles */
+        .section {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #1C4E80;
+        }
+
+        .section h3 {
+            font-size: 11pt;
+            color: #1C4E80;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section h3::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #1C4E80;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .feature {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 35px;
+            height: 35px;
+            background: #e0f2fe;
+            border-radius: 8px;
+            margin: 0 auto 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .feature h4 {
+            font-size: 9pt;
+            color: #1C4E80;
+            margin-bottom: 4px;
+        }
+
+        .feature p {
+            font-size: 8pt;
+            color: #666;
+        }
+
+        /* Benefits List */
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 9pt;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .stat {
+            background: white;
+            padding: 12px 8px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #1C4E80;
+        }
+
+        .stat-label {
+            font-size: 7pt;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Pricing */
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .price-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+        }
+
+        .price-card.featured {
+            border-color: #1C4E80;
+            position: relative;
+        }
+
+        .price-card.featured::before {
+            content: 'POPULAR';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1C4E80;
+            color: white;
+            font-size: 7pt;
+            padding: 2px 10px;
+            border-radius: 10px;
+        }
+
+        .price-card h4 {
+            font-size: 10pt;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .price-card .price {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #1C4E80;
+        }
+
+        .price-card .price span {
+            font-size: 9pt;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .price-card ul {
+            list-style: none;
+            font-size: 8pt;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .price-card li {
+            padding: 3px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        /* CTA */
+        .cta {
+            background: #1C4E80;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .cta h3 {
+            font-size: 12pt;
+            margin-bottom: 8px;
+        }
+
+        .cta p {
+            font-size: 9pt;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .cta-contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 9pt;
+        }
+
+        .cta-contact div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 7pt;
+            color: #999;
+            text-align: center;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                padding: 0;
+            }
+
+            .section, .feature, .stat, .price-card {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <div class="logo-icon">&#x1F69B;</div>
+            <div class="logo-text">
+                <h1>TCT YMS</h1>
+                <p>Yard Management System</p>
+            </div>
+        </div>
+        <div class="tagline">
+            Transform Your Yard Operations<br>
+            <small style="font-weight: normal; font-size: 8pt;">Purpose-built for Cross-Docks & 3PLs</small>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Hero -->
+        <div class="hero full-width">
+            <h2>Stop Losing Money to Yard Chaos</h2>
+            <p>Real-time trailer tracking, smart dock scheduling, and mobile spotter management — all in one affordable platform</p>
+        </div>
+
+        <!-- Features -->
+        <div class="full-width">
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">&#x1F6AA;</div>
+                    <h4>Gate Management</h4>
+                    <p>Quick check-in/out with carrier lookup and documentation capture</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#x1F4CD;</div>
+                    <h4>Live Yard Map</h4>
+                    <p>Interactive drag-and-drop map showing every trailer location</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#x1F4F1;</div>
+                    <h4>Spotter Mobile App</h4>
+                    <p>Phone-based task management — works on any smartphone</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#x1F6E0;</div>
+                    <h4>Dock Scheduling</h4>
+                    <p>Optimize door assignments and reduce wait times</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#x23F1;</div>
+                    <h4>Dwell Tracking</h4>
+                    <p>Automatic alerts for trailers exceeding time thresholds</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#x1F4CA;</div>
+                    <h4>Analytics</h4>
+                    <p>Real-time dashboards and exportable reports</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="section">
+            <h3>Why TCT YMS?</h3>
+            <ul class="benefits-list">
+                <li>See every trailer location in real-time — no more searching</li>
+                <li>Reduce average dwell time by 30-40%</li>
+                <li>Eliminate radio confusion with digital task assignments</li>
+                <li>Cut detention fees with proactive alerts</li>
+                <li>Make data-driven decisions with built-in analytics</li>
+                <li>Go live in days, not months — minimal training required</li>
+                <li>Works on existing hardware — no expensive equipment</li>
+                <li>Local support from people who understand your business</li>
+            </ul>
+        </div>
+
+        <!-- Stats -->
+        <div class="section">
+            <h3>Proven Results</h3>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Faster Moves</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">90%</div>
+                    <div class="stat-label">Less Searching</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">35%</div>
+                    <div class="stat-label">Lower Dwell</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">Typical ROI</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="full-width section" style="border-left-color: #10b981;">
+            <h3 style="color: #10b981;">Simple, Transparent Pricing</h3>
+            <div class="pricing">
+                <div class="price-card">
+                    <h4>Starter</h4>
+                    <div class="price">$499<span>/mo</span></div>
+                    <ul>
+                        <li>Up to 5 users</li>
+                        <li>30 dock doors</li>
+                        <li>100 yard slots</li>
+                        <li>All core features</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+                <div class="price-card featured">
+                    <h4>Professional</h4>
+                    <div class="price">$799<span>/mo</span></div>
+                    <ul>
+                        <li>Up to 15 users</li>
+                        <li>60 dock doors</li>
+                        <li>250 yard slots</li>
+                        <li>Advanced analytics</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+                <div class="price-card">
+                    <h4>Enterprise</h4>
+                    <div class="price">$1,299<span>/mo</span></div>
+                    <ul>
+                        <li>Unlimited users</li>
+                        <li>Unlimited capacity</li>
+                        <li>API access</li>
+                        <li>Custom integrations</li>
+                        <li>Dedicated support</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 8pt; margin-top: 10px; color: #666;">
+                All plans include: Unlimited trailers & moves | Free setup assistance | 30-day money-back guarantee
+            </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta full-width">
+            <h3>Ready to Transform Your Yard?</h3>
+            <p>Schedule a free demo and see TCT YMS in action. We'll show you exactly how it works for your operation.</p>
+            <div class="cta-contact">
+                <div>&#x1F4E7; sales@tctyms.com</div>
+                <div>&#x1F4DE; (956) XXX-XXXX</div>
+                <div>&#x1F310; www.tctyms.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2024 TCT Yard Management System. Purpose-built for cross-docks, 3PLs, and logistics operations in the Laredo market and beyond.
+    </div>
+</body>
+</html>
